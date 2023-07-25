@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/styles.css">
+    <script src="https://kit.fontawesome.com/7de39b8e2a.js" crossorigin="anonymous"></script>
+    <title>CustomRugs</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">CUSTOMRUGS</a>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Proceso</a></li>
+                </ul>
+            </div>
+            <img src="./img/menu-btn.png" alt="menu hamburger" class="menu-hamburger">
+        </nav>
+    </header>
+    
+    <main>
+        <div class="separador">
+            <h1>Stock actual</h1>
+        </div>
+
+        <div class="cartas" id="jscartas">
+            <div class="container1" id="jscontainer">
+            </div>
+    </div>
+    </main>
+
+    <footer>
+        <div class="social">
+            <a href="#" class="fa-brands fa-instagram"></a>
+            <a href="#" class="fa-brands fa-whatsapp"></a>
+            <a href="#" class="fa-brands fa-tiktok"></a>
+        </div>
+
+        <ul class="list">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Productos</a>
+            </li>
+            <li>
+                <a href="#">Galeria</a>
+            </li>
+            <li>
+                <a href="#">Nosotros</a>
+            </li>
+            <li>
+                <a href="#">Proceso</a>
+            </li>
+        </ul>
+
+        <p class="copyright">
+            CustomRugs todos los derechos reservados - 2023.
+        </p>
+    </footer>
+    <script src="productos.js"></script>
+    <script src="script.js"></script>
+</body>
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+    </script>
+</html>
