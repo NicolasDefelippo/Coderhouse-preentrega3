@@ -6,20 +6,17 @@ function filtrarPorTipo(tipo) {
     renderizarProductos(productosFiltrados);
 }
 
-// Mostrar todos los productos
-function mostrarTodosLosProductos() {
-    renderizarProductos(productos);
-}
-
 // Inicializar mostrando todos los productos
-mostrarTodosLosProductos();
+document.addEventListener("DOMContentLoaded", () => {
+    renderizarProductos(productos);
+});
 
 // Manejar clic en botones de filtrado por tipo
 document.getElementById("pokemonBtn").addEventListener("click", () => filtrarPorTipo("pokemon"));
 document.getElementById("nickelodeonBtn").addEventListener("click", () => filtrarPorTipo("nickelodeon"));
 document.getElementById("animeBtn").addEventListener("click", () => filtrarPorTipo("anime"));
 document.getElementById("disneyBtn").addEventListener("click", () => filtrarPorTipo("disney"));
-document.getElementById("showAllBtn").addEventListener("click", mostrarTodosLosProductos);
+document.getElementById("showAllBtn").addEventListener("click", () => {renderizarProductos(productos);});
 
 // Función para agregar producto al carrito
 function agregarAlCarrito(producto) {
