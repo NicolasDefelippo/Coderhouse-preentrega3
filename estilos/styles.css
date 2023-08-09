@@ -98,7 +98,7 @@ header {
   margin-top: 40px;
 }
 
-a.my-button {
+button.my-button {
   background: linear-gradient(to right, #196BCA, #d1d1ff);
   background-color: #196BCA;
   color: #fff;
@@ -114,13 +114,13 @@ a.my-button {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-a.my-button:hover {
+button.my-button:hover {
   background: linear-gradient(to right, #5482d0, #d6d6ff);
   background-color: #5482d0;
   transition: 0.2s;
 }
 
-a.my-button:active {
+button.my-button:active {
   transform: scale(0.95);
 }
 
@@ -166,7 +166,7 @@ a.my-button:active {
   font-size: 14px;
   position: relative;
 }
-.container1 .box a {
+.container1 .box button {
   margin-top: 20px;
 }
 
@@ -207,7 +207,7 @@ a.my-button:active {
   margin-top: 20px;
 }
 
-a.my-button1 {
+button.my-button1 {
   background: linear-gradient(to right, #196BCA, #d1d1ff);
   background-color: #196BCA;
   color: #fff;
@@ -223,13 +223,13 @@ a.my-button1 {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
-a.my-button1:hover {
+button.my-button1:hover {
   background: linear-gradient(to right, #5482d0, #d6d6ff);
   background-color: #5482d0;
   transition: 0.2s;
 }
 
-a.my-button1:active {
+button.my-button1:active {
   transform: scale(0.95);
 }
 
@@ -313,285 +313,6 @@ a.my-button2 {
   display: inline-block;
 }
 
-/* -------------------------------GALERIA------------------------------- */
-.conteinergaleria {
-  width: 95%;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-.galeria {
-  margin: 0 auto 30px;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 250px;
-  grid-auto-flow: dense;
-}
-.galeria div img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.v-stretch {
-  grid-row: span 2;
-}
-
-.h-stretch {
-  grid-column: span 2;
-}
-
-.big-stretch {
-  grid-row: span 2;
-  grid-column: span 2;
-}
-
-/* -----------------------------PROCESO-------------------------------------- */
-.texto {
-  background-color: white;
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
-}
-
-.groups {
-  margin: 0 auto;
-  width: 95%;
-  height: auto;
-  padding: 10px;
-}
-.groups li {
-  position: relative;
-  list-style: none;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.0666666667);
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-.groups .card {
-  overflow: hidden;
-  display: block;
-}
-.groups .card .texto {
-  margin-top: 30px;
-}
-.groups .card .texto .title {
-  margin-bottom: 30px;
-}
-.groups .card .image-session {
-  float: left;
-  overflow: hidden;
-  margin-right: 10px;
-}
-.groups .card .image-session .image {
-  width: 210px;
-  height: 220px;
-  display: block;
-  background-size: cover;
-  background-position: center;
-}
-
-/* -----------------------------CONTACTOS-------------------------------------- */
-.image-session1 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/alfombra1.jpg);
-}
-.image-session1 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session2 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/alfombra2.jpg);
-}
-.image-session2 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session3 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/alfombra3.jpg);
-}
-.image-session3 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session4 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/procesoinicial.jpg);
-}
-.image-session4 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session5 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/proceso1.jpg);
-}
-.image-session5 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session6 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/proceso2.jpg);
-}
-.image-session6 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session7 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/recorte.jpg);
-}
-.image-session7 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.image-session8 {
-  float: left;
-  overflow: hidden;
-  height: 200px;
-  width: 300px;
-  margin-right: 15px;
-  background-image: url(../img/alfombra1.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../img/proceso3.jpg);
-}
-.image-session8 .fa-brands {
-  text-align: center;
-  font-size: 150px;
-  color: white;
-  text-shadow: #000 1px 0 5px;
-}
-
-.mapa {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 1560px) {
-  .container {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    display: flex;
-    justify-content: center;
-  }
-  .container .caja2 {
-    display: none;
-  }
-  .container h1 {
-    margin: 20px;
-    text-align: center;
-  }
-  .container p {
-    text-align: center;
-  }
-  .container a {
-    text-align: center;
-  }
-  .separador {
-    display: flex;
-    justify-content: center;
-  }
-}
 @media screen and (max-width: 900px) {
   .navbar {
     padding: 0;

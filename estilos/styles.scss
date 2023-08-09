@@ -114,7 +114,7 @@ header {
     }
 }
 
-a.my-button {
+button.my-button {
     background: linear-gradient(to right,#196BCA ,#d1d1ff);
     background-color: #196BCA;
     color: #fff;
@@ -130,13 +130,13 @@ a.my-button {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-a.my-button:hover {
+button.my-button:hover {
     background: linear-gradient(to right,#5482d0 ,#d6d6ff);
     background-color: #5482d0;
     transition: 0.2s;
 }
 
-a.my-button:active {
+button.my-button:active {
     transform: scale(0.95);
 }
 
@@ -185,7 +185,7 @@ a.my-button:active {
             position: relative;
         }
 
-        a {
+        button {
             margin-top: 20px;
         }
     }
@@ -233,7 +233,7 @@ a.my-button:active {
     }
 }
 
-a.my-button1 {
+button.my-button1 {
     background: linear-gradient(to right,#196BCA ,#d1d1ff);
     background-color: #196BCA;
     color: #fff;
@@ -249,13 +249,13 @@ a.my-button1 {
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-a.my-button1:hover {
+button.my-button1:hover {
     background: linear-gradient(to right,#5482d0 ,#d6d6ff);
     background-color: #5482d0;
     transition: 0.2s;
 }
 
-a.my-button1:active {
+button.my-button1:active {
     transform: scale(0.95);
 }
 

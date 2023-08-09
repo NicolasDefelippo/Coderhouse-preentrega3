@@ -52,9 +52,9 @@ function renderizarProductos(listaProds){
             </div>
             <h1>${producto.nombre}</h1>
             <p>${producto.descripcion}</p>
-            <a class="my-button1 add-to-cart" data-id="${producto.id}" href="#">
+            <button class="my-button1 add-to-cart" data-id="${producto.id}" href="#">
             <i class="fa-solid fa-cart-shopping"></i> $ ${producto.precio}
-        </a>
+        </button>
         </div>`;
     }
 }
