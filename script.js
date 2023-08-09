@@ -1,70 +1,60 @@
 console.table(productos);
-let contenedorProds = document.getElementById('jscontainer');
 
+// Función para filtrar productos por tipo
 function filtrarPorTipo(tipo) {
-    const tipofiltrado = productos.filter((producto) => producto.tipo === tipo.toLowerCase());
-    return tipofiltrado;
+    const productosFiltrados = productos.filter(producto => producto.tipo === tipo);
+    renderizarProductos(productosFiltrados);
 }
 
-let tipoUsuario = parseFloat(prompt('Elegir por categoría:\n 1- Pokemon\n 2- Nickelodeon \n 3- Anime \n 4- Disney \n 5- Todas las categorias \n 0- Salir'));
+// Mostrar todos los productos
+function mostrarTodosLosProductos() {
+    renderizarProductos(productos);
+}
 
-while (tipoUsuario !== 0) {
-    switch(tipoUsuario) {
-        case 1:
-            alert('Filtraste a la categoría Pokemon');
-            const productosFiltradosPokemon = filtrarPorTipo("pokemon");
-            console.table(productosFiltradosPokemon);
-            renderizarProductos(productosFiltradosPokemon); // Mostrar productos filtrados en el HTML
-            break;
-        case 2:
-            alert('Filtraste a la categoría Nickelodeon');
-            const productosFiltradosNickelodeon = filtrarPorTipo("nickelodeon");
-            console.table(productosFiltradosNickelodeon);
-            renderizarProductos(productosFiltradosNickelodeon); // Mostrar productos filtrados en el HTML
-            break;
-        case 3:
-            alert('Filtraste a la categoría Anime');
-            const productosFiltradosAnime = filtrarPorTipo("anime");
-            console.table(productosFiltradosAnime);
-            renderizarProductos(productosFiltradosAnime); // Mostrar productos filtrados en el HTML
-            break;
-        case 4:
-            alert('Filtraste a la categoría Disney');
-            const productosFiltradosDisney = filtrarPorTipo("disney");
-            console.table(productosFiltradosDisney);
-            renderizarProductos(productosFiltradosDisney); // Mostrar productos filtrados en el HTML
-            break;
-        case 5:
-            alert('Mostrando la tabla completa de productos:');
-            console.table(productos);
-            renderizarProductos(productos); // Mostrar todos los productos en el HTML
-            break;
-        default:
-            alert('Mostrando la tabla completa de productos:');
-            console.table(productos);
-            renderizarProductos(productos); // Mostrar todos los productos en el HTML
-            break;
+// Inicializar mostrando todos los productos
+mostrarTodosLosProductos();
+
+// Manejar clic en botones de filtrado por tipo
+document.getElementById("pokemonBtn").addEventListener("click", () => filtrarPorTipo("pokemon"));
+document.getElementById("nickelodeonBtn").addEventListener("click", () => filtrarPorTipo("nickelodeon"));
+document.getElementById("animeBtn").addEventListener("click", () => filtrarPorTipo("anime"));
+document.getElementById("disneyBtn").addEventListener("click", () => filtrarPorTipo("disney"));
+document.getElementById("showAllBtn").addEventListener("click", mostrarTodosLosProductos);
+
+// Función para agregar producto al carrito
+function agregarAlCarrito(producto) {
+    const cartItem = document.createElement("li");
+    cartItem.textContent = producto.nombre + " - $" + producto.precio;
+    document.getElementById("cartItems").appendChild(cartItem);
+}
+
+// Manejar clic en botones "Agregar al Carrito"
+document.getElementById("jscontainer").addEventListener("click", event => {
+    if (event.target.classList.contains("add-to-cart")) {
+        const productId = parseInt(event.target.getAttribute("data-id"));
+        const product = productos.find(producto => producto.id === productId);
+        if (product) {
+            agregarAlCarrito(product);
+        }
     }
-
-    tipoUsuario = parseFloat(prompt('Elegir por categoría:\n 1- Pokemon\n 2- Nickelodeon \n 3- Anime \n 4- Disney \n 5- Todas las categorias \n 0- Salir'));
-}
+});
 
 //DOM
 function renderizarProductos(listaProds){
-    // Limpiar el contenedor antes de agregar nuevos productos
+    const contenedorProds = document.getElementById('jscontainer');
     contenedorProds.innerHTML = '';
 
-    //cargamos las cards de los productos de la lista
-    for(const producto of listaProds){
+    for (const producto of listaProds){
         contenedorProds.innerHTML += `
         <div class="box">
-                    <div class="imgbox">
-                        <img src=${producto.foto} alt="">
-                    </div>
-                    <h1>${producto.nombre}</h1>
-                    <p>${producto.descripcion}</p>
-                    <a class="my-button1" href="#"> <i class="fa-solid fa-cart-shopping"></i> $ ${producto.precio}</a>
-                </div>
-        `;
+            <div class="imgbox">
+                <img src=${producto.foto} alt="">
+            </div>
+            <h1>${producto.nombre}</h1>
+            <p>${producto.descripcion}</p>
+            <a class="my-button1 add-to-cart" data-id="${producto.id}" href="#">
+            <i class="fa-solid fa-cart-shopping"></i> $ ${producto.precio}
+        </a>
+        </div>`;
     }
 }
