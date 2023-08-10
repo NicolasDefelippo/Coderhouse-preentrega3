@@ -363,6 +363,12 @@ a.my-button2 {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.7);
 }
+#cart h2 {
+  margin-left: 10px;
+}
+#cart ul {
+  margin-left: 10px;
+}
 
 @media screen and (max-width: 900px) {
   .navbar {
